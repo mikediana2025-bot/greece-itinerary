@@ -1,0 +1,28 @@
+{
+  "name": "Greece 2025 Travel Dashboard",
+  "short_name": "Greece 2025",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#1B4F72",
+  "description": "Interactive Greece itinerary for Athens, Naxos, Santorini, flights, ferries, and travel-day planning.",
+  "icons": [
+    {
+      "src": "greece-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "greece-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

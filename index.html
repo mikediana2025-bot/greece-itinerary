@@ -3,7 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greece Trip · Aug 24 – Sep 6, 2025</title>
+<meta name="theme-color" content="#1B4F72">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Greece 2025">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="greece-icon-192.png">
+<title>🇬🇷 Greece 2025 Travel Dashboard</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
@@ -361,10 +369,14 @@
   /* FOOTER */
   .footer {
     background: var(--aegean);
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.72);
     text-align: center;
-    padding: 20px;
+    padding: 18px 20px;
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1.5;
   }
 
   /* ACCOMMODATIONS */
@@ -1575,7 +1587,8 @@ Arrive Athens at <strong>11:00 AM</strong> on Delta 222. Metro to Monastiraki. C
 
 <!-- FOOTER -->
 <div class="footer">
-  Greece trip · Aug 24 – Sep 6, 2025 · Athens · Naxos · Paros day trip · Santorini · Pregnancy-friendly
+  <div>🇬🇷 Greece 2025 Travel Dashboard · Version 2.4</div>
+  <div>Hosted on GitHub Pages · Open on iPhone ✓ · Add to Home Screen ✓ · Offline ready after first load ✓</div>
 </div>
 
 <script>
@@ -1880,6 +1893,14 @@ Arrive Athens at <strong>11:00 AM</strong> on Delta 222. Metro to Monastiraki. C
     }
     ['athens1','naxos','santorini','departure'].forEach(renderAccom);
   });
+
+  // ── PWA registration ────────────────────────────────────────
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    });
+  }
+
 </script>
 </body>
 </html>
